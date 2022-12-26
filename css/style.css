@@ -7,15 +7,22 @@
     flex-direction: column;
     min-height: 100vh;
 } */
+button {
+    cursor: pointer;
+}
 .skill__page {
     display: flex;
     flex-wrap: wrap;
     max-width: 1300px;
     background: url(../img/zelenii-volni.png) no-repeat;
+    background-size:cover;
     margin: 0 auto;
     
 }
 /* Header */
+.site-logo {
+    margin: 0 50px;
+}
 .header {
     position: relative;
     display: flex;
@@ -28,13 +35,91 @@
     padding: 0 16px;
     box-sizing: border-box;
     background-color: #a1bd2491;
-    /* border: 1px solid azure; */
     border-end-end-radius: 80%;
     border-end-start-radius: 50px;
     box-shadow: 0 10px 30px #5e0adb;
     margin-bottom: 100px;
     
 }
+/* Popup menu */
+.popup-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.popup-menu__button {
+    display: block;
+    width: 250px;
+    height: 80px;
+    background-image: url('../img/Bird.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(127, 160, 227, 0.532);
+    border-bottom-right-radius: 80%;
+    background-position: left;
+    border: none;
+    
+}
+.menu__button {
+    font-family: 'Open Sans';
+    color: #2c2c2c;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-left: 50px;
+
+}
+.popup-menu__list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    left: 27%;
+    bottom: 0;
+    transform: translate(-50%,100%);
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.popup-menu__item {
+    /* display: flex; */
+    min-height: 89px;
+    justify-content: center;
+}
+.popup-menu__link {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-family: 'Open Sans';
+    color: #e0e0e0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 39px;
+    padding-bottom: 26px;
+    border-radius: 5px;
+    
+}
+
+.popup-menu__link:hover {
+    background-color: rgba(127, 160, 227, 0.832);
+}
+.popup-menu__link_active {
+    background-color: rgba(127, 160, 227, 0.832);
+}
+@media screen and (min-width: 800px) {
+    .popup-menu {
+        display: none;
+    }
+    
+}
+       
+
 /* glavnoe-menu */
 .menu {
     display: flex;
@@ -64,7 +149,14 @@
     background-color: rgba(127, 160, 227, 0.832);
     text-decoration: none;
 }
-.buttons {
+@media screen and (max-width:800px) {
+    .menu-link {
+        display: none;
+    }
+
+    
+}
+/* .buttons {
     display: flex;
     flex-wrap: wrap;
 }
@@ -87,16 +179,20 @@
     background-color:  rgba(127, 160, 227, 0.832);
     border-radius: 10px;
     margin-right: 30px;
-}
+} */
 
 /* Main */
 .main {
     display: flex;
     flex-wrap: wrap;
     margin: 0 40px;
-    max-width: 920px;
-    width: 100%;
+        width: 100%;
     padding-top: 45px;
+    
+}
+.main__all {
+    display: flex;
+    flex-wrap: wrap;
     
 }
 .main__heading {
@@ -112,18 +208,26 @@
     /* flex-wrap: wrap; */
     position: relative;
 }
+.main__problems {
+    margin-bottom: 40px;
+}
 .main__pictures {
-    margin: 0 100px;
-    border-radius: 50%;
+    display: flex;
+    margin-left: 200px;
+    /* border-radius: 50%; */
     box-shadow: 20px 50px 30px rgb(73, 71, 71, 0.7);
+    width: 650px;
+    height: 400px;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 45%;
 }
 .main__pictures-stars {
     position: absolute;
     z-index: 1;
-    left: 675px;
-    top: -105px;
+    right: 471px;
+    top: 127px;
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:1200px) {
         .main__text {
             flex-wrap: wrap;
             width: 90%;
@@ -134,6 +238,7 @@
         .main__pictures {
             margin:initial;
             margin-bottom: 30px;
+            width: 90%;
         }
         .main__pictures-stars {
             display: none;
@@ -181,3 +286,16 @@
     .innop-link {
         color: #5e0adb;
     }
+    .footer__pictures-usor {
+        max-width: 700px;
+    }
+    @media screen and (max-width:800px) {
+        .footer__pictures-usor {
+            width: 90%;
+        }
+        
+    }
+/* JS */
+.hide {
+    display: none;
+}

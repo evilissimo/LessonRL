@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Learn_skills</title>
+    <script defer src="js/popup.js"></script>
 </head>
 <body class="page">
     <section class="skill__page">
@@ -23,18 +24,28 @@
         <li><a class="menu-link" href="pages/about.html"> О себе </a></li>
         <li><a class="menu-link" href="pages/contacts.html"> Контакты </a></li>
     </ul>
+    <nav class="popup-menu">
+        <button class="popup-menu__button">
+            <p class="menu__button">Menu</p></button>
+         <ul class="popup-menu__list hide">
+            <li class="popup-menu__item"><a class="popup-menu__link popup-menu__link_active" href="#">Главная</a></li>
+            <li class="popup-menu__item"><a class="popup-menu__link" href="#feature">О себе</a></li>
+            <li class="popup-menu__item"><a class="popup-menu__link" href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
 <!-- <div class="buttons">
     <button class="button_log"> Войти </button>
     <button class="button_sign"> Сказать</button>
 </div> -->
     </header>
     <section class="main">
-        <img class="main__problems" alt="two" src="img/Problems.jpg" width="300">
-            <div class="main__text">
-                
-                <h1 class="main__heading">Узнавайте о Русском языке Много нового,интересного <br>Каждый день</h1>
-                <img class="main__pictures" alt="face" src="img/Teacher.jpg" width="650" height="380">
-                <img class="main__pictures-stars" alt="stars" src="img/Rombs.png" width="100" height="220">
+        <div class="main__all">
+        <img class="main__problems" alt="two" src="img/boy -pencil.png" width="300" height="200">
+        <img class="main__pictures" alt="face" src="img/Teacher.jpg" width="650" height="400">
+        <img class="main__pictures-stars" alt="stars" src="img/Rombs.png" width="100" height="220">
+       </div>
+        <div class="main__text">
+                <h1 class="main__heading">  Узнавайте о Русском языке<br>  Много нового,<br>интересного<br>Каждый день</h1>
             </div>
     </section>
     <div class="body__head">
@@ -47,6 +58,6 @@
 <footer class="footer">
     <p class="copy-write">2022 &copy; <a class="innop-link" href="https://innopolis.com/">Иннополис</a></p>
 </footer>  
-</section> 
+</section>
 </body>
 </html>
